@@ -12,6 +12,7 @@ with open("data_labels.csv", "rb") as file:
             accs.append(all_docs[-1].preds())
         except:
             print("Error: No file found "+row["file"]+".")
+        break
 
 pa = 0
 aa = 0

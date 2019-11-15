@@ -30,11 +30,18 @@ class Document():
     def open_file(self, file):
         # Open file.
         try:
-            lines = ""
+            all_lines = []
+            line = ""
             with open(file) as file:
                 for l in file.readlines():
-                    lines += l.strip() + " "
-            self.text = nltk.sent_tokenize(lines)
+                    if re.search("\w", l) is None:
+                        all_lines.append(re.sub("\s+", " ", line.strip()))
+                        line = ""
+                    else:
+                        line += l.strip() + " "
+            self.text = []
+            for line in all_lines:
+                self.text.append(list(nltk.sent_tokenize(line)))
         except Exception as e:
             print("Error: Error opening file.")
             print(e)
@@ -42,29 +49,32 @@ class Document():
     def generate_features(self):
         # Generate all features from text.
         self.pos_ner_tags = []
-        doc = ""
         self.corefs = defaultdict(list)
-        
-        # Iterate through sentences.
-        for sent in self.text:
-            if len(doc) > 0:
-                doc += " "
-            doc += sent
-            
-            # Get pos and ner tags.
-            sent = nltk.word_tokenize(sent)
-            sent = nltk.pos_tag(sent)
-            sent = nltk.chunk.ne_chunk(sent)
-            self.pos_ner_tags.append(sent)
-            
-        # Do coreference resolution.
         nlp = spacy.load("en_core_web_sm")
         neuralcoref.add_to_pipe(nlp)
-        doc = nlp(doc)
-        for ent in doc.ents:
-            if ent._.is_coref:
-                key = self.entitiy_cleaner(ent)
-                self.corefs[key].extend(ent._.coref_cluster)
+        
+        # Iterate through sentences.
+        for par in self.text:
+            p = []
+            doc = ""
+            for sent in par:
+                if len(doc) > 0:
+                    doc += " "
+                doc += sent
+                
+                # Get pos and ner tags.
+                sent = nltk.word_tokenize(sent)
+                sent = nltk.pos_tag(sent)
+                sent = nltk.chunk.ne_chunk(sent)
+                p.append(sent)
+            self.pos_ner_tags.append(p)
+            
+            # Do coreference resolution.
+            doc = nlp(doc)
+            for ent in doc.ents:
+                if ent._.is_coref:
+                    key = self.entitiy_cleaner(ent)
+                    self.corefs[key].extend(ent._.coref_cluster)
             
     
     def entitiy_cleaner(self, ent):
@@ -102,5 +112,6 @@ class Document():
         return [pg, ag]
             
 # Test - Delete 
-#d = Document("files/pg375.txt", "Peyton Farquhar", "No One")
-#d.preds()
+d = Document("files/pg375.txt", "Peyton Farquhar", "No One")
+print(d.corefs)
+d.preds()
