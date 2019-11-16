@@ -6,6 +6,8 @@ import spacy
 import neuralcoref
 import re
 from collections import defaultdict
+import copy
+from nltk.tree import Tree
 
 #nltk.download("popular")
 
@@ -16,12 +18,13 @@ class Document():
     text = None
     protagonist_g = None
     antagonist_g = None
-    pos_ner_tags = None
+    ner_tags = None
     corefs = None
+    tmp = None
     
-    def __init__(self, file, protagonist, antagonist):
+    def __init__(self, title, file, protagonist, antagonist):
         # Initilize class variables.
-        self.title = ntpath.basename(file).rsplit(".", 1)[-2]
+        self.title = title
         self.protagonist_g = protagonist
         self.antagonist_g = antagonist
         self.open_file(file)
@@ -48,14 +51,14 @@ class Document():
             
     def generate_features(self):
         # Generate all features from text.
-        self.pos_ner_tags = []
+        self.ner_tags = set()
         self.corefs = defaultdict(list)
         nlp = spacy.load("en_core_web_sm")
         neuralcoref.add_to_pipe(nlp)
+        bad_tags = set()
         
         # Iterate through sentences.
         for par in self.text:
-            p = []
             doc = ""
             for sent in par:
                 if len(doc) > 0:
@@ -66,32 +69,66 @@ class Document():
                 sent = nltk.word_tokenize(sent)
                 sent = nltk.pos_tag(sent)
                 sent = nltk.chunk.ne_chunk(sent)
-                p.append(sent)
-            self.pos_ner_tags.append(p)
+                for chunk in sent:
+                    if hasattr(chunk, "label"):
+                        if chunk.label() == "PERSON" or chunk.label() == "ORGANIZATION":
+                            self.ner_tags.add(self.entitiy_cleaner("".join(c[0] for c in chunk)))
+#                        else:
+#                            bad_tags.add(("".join(c[0] for c in chunk), chunk.label()))
+                if self.tmp is None:
+                    self.tmp = sent
             
             # Do coreference resolution.
+            crefs = defaultdict(list)
             doc = nlp(doc)
             for ent in doc.ents:
                 if ent._.is_coref:
                     key = self.entitiy_cleaner(ent)
-                    self.corefs[key].extend(ent._.coref_cluster)
-            
+                    crefs[key].extend(list(ent._.coref_cluster))
+            for k in sorted(crefs, key = len, reverse = True):
+                in_c = False
+                for n in self.ner_tags:
+                    if k in n or n in k:
+                        in_c = True
+                if in_c == False:
+                    continue
+                in_c = False
+                for k_m in self.corefs.keys():
+                    if k in k_m or k_m in k:
+                        self.corefs[k_m].extend(crefs[k])
+                        in_c = True
+                        break
+                if in_c == False:
+                    self.corefs.update({k: crefs[k]})
+        
+    def get_people(self, text):
+        chunked = nltk.ne_chunk(text)
+        continuous_chunk = []
+        current_chunk = []
+        for i in chunked:
+            if type(i) == Tree:
+                current_chunk.append(" ".join([token for token, pos in i.leaves()]))
+            elif current_chunk:
+                named_entity = " ".join(current_chunk)
+                if named_entity not in continuous_chunk:
+                    continuous_chunk.append(named_entity)
+                    current_chunk = []
+            else:
+                continue
+        return continuous_chunk
     
     def entitiy_cleaner(self, ent):
         return re.sub("\s+", " ", str(ent).strip()).lower()
     
     def preds(self):
         from tabulate import tabulate
-        p = None
-        a = None
-        for e in self.corefs:
-            if re.search("gutenberg", e) is not None:
-                continue
-            if p is None:
-                p = e
-            if len(self.corefs[e]) > len(self.corefs[p]):
-                a = p
-                p = e
+        cref_keys = sorted(self.corefs, key = lambda k: len(self.corefs[k]), reverse = False)
+        for k in self.corefs:
+            if "gutenberg" in k:
+                del cref_keys[cref_keys.index(k)]
+        
+        p = cref_keys[-1]
+        a = cref_keys[-2]
         pg = self.entitiy_cleaner(str(self.protagonist_g))
         if pg in p or p in pg:
             pg = True
@@ -110,8 +147,3 @@ class Document():
         print(tabulate(values, headers = ["Prediction", "Gold", "Compare"]))
         print()
         return [pg, ag]
-            
-# Test - Delete 
-d = Document("files/pg375.txt", "Peyton Farquhar", "No One")
-print(d.corefs)
-d.preds()

@@ -1,0 +1,8 @@
+Frankenstein; Or, The Modern Prometheus, False, False
+Pride and Prejudice, True, False
+Beowulf: An Anglo-Saxon Epic Poem, True, False
+The Strange Case of Dr. Jekyll and Mr. Hyde, False, False
+Moby Dick, False, False
+A Tale of Two Cities, False, False
+protagonist accuracy: 0.3333333333333333
+antagonist accuracy: 0.0
