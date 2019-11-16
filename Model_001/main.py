@@ -35,4 +35,5 @@ a_model.train_model(params)
 print("Trained pa model")
 
 # Get Test Accuracy -----------------------------------------------------------
-            
+p_model.test(all_docs[-1])
+a_model.test(all_docs[-1])

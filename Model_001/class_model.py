@@ -35,11 +35,11 @@ class Model():
     def cross_validate(self):
         pass
     
-    def test(self, doc, label):
-        p = self.model.predict(doc)
-        if p in label or label in p:
-            return True
-        return False
+#    def test(self, doc):
+#        p = self.model.predict(doc.get_
+#        if p in label or label in p:
+#            return True
+#        return False
     
     
     
