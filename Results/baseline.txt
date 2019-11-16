@@ -3,6 +3,78 @@ Pride and Prejudice, True, False
 Beowulf: An Anglo-Saxon Epic Poem, True, False
 The Strange Case of Dr. Jekyll and Mr. Hyde, False, False
 Moby Dick, False, False
+The Legend of Sleepy Hollow, True, True
 A Tale of Two Cities, False, False
-protagonist accuracy: 0.3333333333333333
-antagonist accuracy: 0.0
+A Doll's House, False, False
+Alice's Adventures in Wonderland, True, False
+A Christmas Carol in Prose, False, False
+Heart of Darkness, False, False
+The Adventures of Sherlock Holmes, True, False
+The Scarlet Letter, False, False
+The Yellow Wallpaper, False, False
+Adventures of Huckleberry Finn, False, False
+Jane Eyre, False, False
+The Importance of Being Earnest, True, False
+Metamorphosis, True, False
+Anthem, False, False
+Ulysses, False, False
+The Adventures of Tom Sawyer, False, False
+The Iliad, True, False
+The Picture of Dorian Gray, True, False
+The Awakening, True, False
+Great Expectations, False, False
+Peter Pan, True, False
+War and Peace, True, False
+Leviathan, False, False
+Crime and Punishment, False, False
+The Hound of the Baskervilles, False, False
+Treasure Island, True, True
+The Turn of the Screw, False, True
+Emma, True, False
+The Count of Monte Cristo, False, False
+The War of the Worlds, False, False
+Uncle Tom's Cabin, True, False
+The Brothers Karamazov, True, False
+Little Women, True, False
+Siddhartha, True, False
+Wuthering Heights, False, False
+The Interesting Narrative of the Life of Olaudah Equiano, False, False
+Anne of Green Gables, False, False
+Les Misérables, False, False
+Gulliver's Travels into Several Remote Nations of the World, False, False
+Pygmalion, False, False
+The Jungle, True, False
+A Study in Scarlet, False, False
+The Wonderful Wizard of Oz, True, True
+Candide, True, False
+The Prophet, False, False
+Le Morte d'Arthur, True, False
+Sense and Sensibility, False, False
+The Time Machine, True, False
+An Occurrence at Owl Creek Bridge, True, False
+The Tragical History of Doctor Faustus, True, False
+Oliver Twist, True, True
+The Odyssey, False, False
+The Life and Adventures of Robinson Crusoe, False, False
+Divine Comedy, True, False
+The Monkey's Paw, True, False
+Carmilla, False, False
+The Jungle Book, True, False
+The Secret Garden, True, False
+Hard Times, True, False
+The Canterbury Tales, False, False
+Anna Karenina, False, False
+Don Quixote, True, False
+Northanger Abbey, True, False
+David Copperfield, False, False
+Ethan Frome, True, False
+The Call of the Wild, True, False
+Madame Bovary, False, False
+Hamlet, Prince of Denmark, False, False
+Hedda Gabler, False, False
+Persuasion, True, False
+A Portrait of the Artist as a Young Man, True, False
+Through the Looking-Glass, True, False
+The Sea-Gull, False, True
+protagonist accuracy: 0.48717948717948717
+antagonist accuracy: 0.07692307692307693

@@ -1,9 +1,10 @@
 # Installs and Downloads ------------------------------------------------------
 import pandas as pd
 from class_document import Document
-
+import os
 all_docs = []
 accs = []
+print(os.getcwd())
 with open("../data_labels.csv", "rb") as file:
     labels = pd.read_csv(file)
     for i, row in labels.iterrows():
