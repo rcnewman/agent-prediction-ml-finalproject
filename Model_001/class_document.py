@@ -37,7 +37,14 @@ class Document():
             all_lines = []
             line = ""
             with open(file) as file:
+                header_end = False
                 for l in file.readlines():
+                    if "*** END OF THIS PROJECT GUTENBERG EBOOK" in l:
+                        break
+                    if "*** START OF THIS PROJECT GUTENBERG EBOOK" in l:
+                        header_end = True
+                    if header_end == False:
+                        continue
                     if re.search("\w", l) is None:
                         all_lines.append(re.sub("\s+", " ", line.strip()))
                         line = ""
