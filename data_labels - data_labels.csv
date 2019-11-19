@@ -1,0 +1,100 @@
+Book,Protagonist,Antagonist,file
+"Frankenstein; Or, The Modern Prometheus",Victor Frankenstein,The Monster,frankenstein.txt
+Pride and Prejudice,Elizabeth Bennet,Lady de Burgh,prideandprejudice.txt
+Beowulf: An Anglo-Saxon Epic Poem,Beowulf,Grendel,beowulf.txt
+The Strange Case of Dr. Jekyll and Mr. Hyde,Mr. Utterson,Mr. Hyde,drjekyll.txt
+Moby Dick,Captain Ahab,Moby Dick,mobydick.txt
+The Legend of Sleepy Hollow,Ichabod,Brom,thelegendofsleepyhollow.txt
+A Tale of Two Cities,Charles Darnay,Madame Defarge,ataleoftwocities.txt
+A Doll's House,Nora,Krogstad,adollshouse.txt
+Alice's Adventures in Wonderland,Alice,Queen of Hearts,alicesadventuresinwonderland.txt
+Dracula,Jonathan Harker,Count Dracula,Dracula.txt
+A Christmas Carol in Prose,Being a Ghost Story of Christmas,,achristmastale.txt
+Heart of Darkness,Marlow,Kurtz,HeartofDarkness.txt
+The Adventures of Sherlock Holmes,Sherlock Holmes,,1661-0.txt
+The Scarlet Letter,Hester Prynne,Roger Chillingworth,25344-0.txt
+The Yellow Wallpaper,,,1952-0.txt
+Adventures of Huckleberry Finn,Huckleberry “Huck” Finn,,76-0.txt
+Jane Eyre,Jane Eyre,Aunt Reed,pg1260.txt
+The Importance of Being Earnest,John (Jack/Ernest) Worthing,,pg844.txt
+Metamorphosis,Gregor Samsa,The Father,pg5200.txt
+Anthem,Prometheus,,1250-0.txt
+Ulysses,Leopold Bloom,Blazes Boylan,4300-0.txt
+The Adventures of Tom Sawyer,Tom Sawyer,Injun Joe,74-0.txt
+The Iliad,Achilles,Agamemnon,6130-0.txt
+The Picture of Dorian Gray,Dorian Gray,James Vane,pg174.txt
+The Awakening,Edna Pontellier,,160-0.txt
+Great Expectations,Pip,Miss Havisham,1400-0.txt
+Peter Pan,Peter Pan,Captain Hook,16-0.txt
+War and Peace,Pierre,Napoleon,2600-0.txt
+Leviathan,Deryn Sharp,,pg3207.txt
+Crime and Punishment,Raskolnikov,Svidrigaïlov,2554-0.txt
+The Hound of the Baskervilles,Sherlock Holmes,Jack Stapleton,2852-0.txt
+Treasure Island,Jim Hawkins,Long John Silver,120-0.txt
+The Turn of the Screw,The Governess,Peter Quint,209-0.txt
+Emma,Emma,Mrs. Elton,158-0.txt
+The Count of Monte Cristo,Edmond Dantès,Fernand,1184-0.txt
+The War of the Worlds,,,36-0.txt
+Uncle Tom's Cabin,Uncle Tom,Simon Legree,203-0.txt
+The Brothers Karamazov,Alyosha Karamazov,Fyodor Karamazov,28054-0.txt
+Little Women,Jo March,,pg514.txt
+Siddhartha,Siddhartha,,pg2500.txt
+Wuthering Heights,Heathcliff,Hindley Earnshaw,pg768.txt
+The Interesting Narrative of the Life of Olaudah Equiano,,,pg15399.txt
+Anne of Green Gables,Anne Shirley,Gilbert Blythe,45-0.txt
+Les Misérables,Jean Valjean,Inspector Javert,135-0.txt
+Gulliver's Travels into Several Remote Nations of the World,Lemuel Gulliver,,829-0.txt
+Pygmalion,Henry Higgins,,pg3825.txt
+The Jungle,Jurgis Rudkus,Phil Connor,140-0.txt
+A Study in Scarlet,Sherlock Holmes,Jefferson Hope,244-0.txt
+The Wonderful Wizard of Oz,Dorothy Gale,The Wicked Witch of the West,pg55.txt
+Candide,Candide,,pg19942.txt
+The Prophet,,,58585-0.txt
+Le Morte d'Arthur,Arthur,Mordred,1251-0.txt
+Sense and Sensibility,Elinor Dashwood,,pg161.txt
+The Time Machine,The Time Traveller,The Morlocks,35-0.txt
+An Occurrence at Owl Creek Bridge,Peyton Farquhar,,pg375.txt
+The Tragical History of Doctor Faustus,Faustus,Mephistopheles,pg779.txt
+Oliver Twist,Oliver Twist,Fagin,pg730.txt
+The Odyssey,Odysseus,Poseidon,1727-0.txt
+The Life and Adventures of Robinson Crusoe,Robinson Crusoe,,521-0.txt
+Divine Comedy,Dante,,pg1001.txt
+The Monkey's Paw,Herbert White,Sergeant-Major Morris,pg12122.txt
+Carmilla,Laura,Carmilla,pg10007.txt
+The Jungle Book,Mowgli,,236-0.txt
+The Secret Garden,Mary Lennox,Archibald Craven,113-0.txt
+Hard Times,Louisa,Bounderby,786-0.txt
+The Canterbury Tales,,,pg22120.txt
+Anna Karenina,Anna,Karenin,1399-0.txt
+Don Quixote,Don Quixote,Sansón Carrasco,996-0.txt
+Northanger Abbey,Catherine Morland,General Tilney,121-0.txt
+David Copperfield,David Copperfield,Mr. Murdstone,766-0.txt
+Ethan Frome,Ethan Frome,Zeena Frome,4517-0.txt
+The Call of the Wild,Buck,Spitz,215-0.txt
+Madame Bovary,Emma Bovary,Charles Bovary,2413-0.txt
+"Hamlet, Prince of Denmark",Hamlet,Claudius,1524-0.txt
+Hedda Gabler,Hedda,Judge Brack,pg4093.txt
+Persuasion,Anne Elliot,William Elliot,pg105.txt
+A Portrait of the Artist as a Young Man,Stephen Dedalus,,4217-0.txt
+Through the Looking-Glass,Alice,The Red Queen,12-0.txt
+The Sea-Gull,Konstantin,Arkadina,1754-0.txt
+Alice's Adventures in Wonderland by Lewis Carroll,Alice,"The Queen of Hearts,The Red Queen",pg19033.txt
+Bleak House by Charles Dickens,"Esther,Lady Dedlock",Tulkinghorn,pg1023.txt
+"The Happy Prince, and Other Tales by Oscar Wilde","The Happy Prince, The Giant, The Nightingale, Little Hans, The Fisherman","The Mayor, The Student, The Miller, The Soul",902-0.txt
+Notre-Dame de Paris by Victor Hugo,Pretty Much Everybody,Claude Frollo,2610-0.txt
+The Fall of the House of Usher by Edgar Allan Poe,"Roderick Usher, The Narrator",Fear,pg932.txt
+The Tale of Peter Rabbit by Beatrix Potter,Peter Rabbit,Michael McGregor�,pg14838.txt
+The Island of Doctor Moreau by H. G. Wells,"Edward Prendick
+","The Beast Folk
+,Dr. Moreau
+",pg159.txt
+Pride and Prejudice by Jane Austen,"Elizabeth Bennet
+","Mr. Wickham and Mr. Darcy
+",pg42671.txt
+The Ramayana,Rama,Ravana,24869-0.txt
+The Duchess of Malfi,"Antonio and the Duchess,Bosola",Ferdinand and the Cardinal,pg2232.txt
+The Three Musketeers,D'Artagnan,"Milady,Cardinal Richelieu",1257-0.txt
+North and South by Elizabeth Cleghorn Gaskell,Margaret Hale,Leonards,4276-0.txt
+Anne of Avonlea by L. M. Montgomery,Anne Shirley,Gilbert Blythe,47-0.txt
+Around the World in Eighty Days by Jules Verne,Phileas Fogg,Detective Fix,pg103.txt
+The House of Mirth by Edith Wharton,Miss Lily Bart,Mrs. Bertha Dorset,pg284.txt

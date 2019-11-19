@@ -1,0 +1,131 @@
+/*********************************************************************/
+/***** BEGIN DESIGN TOOLS CORE THEME IMPORT **************************/
+/*********************************************************************/
+/* Import statements need to be at the top of your CSS file */
+/* For Main CSS file */
+@import url(https://designtools.ciditools.com/css/themes.css);
+/* For Mobile app CSS file */
+/*@import url(https://designtools.ciditools.com/css/app.css);*/
+/* Institution color customizations */
+@import url(https://files.ciditools.com/unt/theme_colors.css);
+/*********************************************************************/
+/***** END DESIGN TOOLS CORE THEME IMPORT ****************************/
+/*********************************************************************/
+/*********************************************************************/
+/***** BEGIN CANVAS WIDGET CSS ***************************************/
+/*********************************************************************/
+.clear_widget_button {
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  background-color: #B6C1CD;
+  border: 2px solid #96A7B8;
+  border-radius: 4px;
+  padding: 4px;
+  min-width: 40px;
+  cursor: pointer;
+}
+.clear_widget_multirequirement {
+    display:none;
+}
+.clear_widget_button:hover { background-color: #A3B0C0; }
+.clear_widget_button.clear_widget_selected { background-color: #7689A0; }
+.clear_widget_swap > div { display:none; }
+.clear_widget_show { display:inline-block !important; }/*********************************************************************/
+/***** END CANVAS WIDGET CSS *****************************************/
+/*********************************************************************/
+
+#kl_wrapper_3.kl_basic_color #kl_banner .kl_subtitle {
+    background-color:#4D4D4D;
+    color: white;
+}
+
+#kl_wrapper_3.kl_basic_color #kl_banner #kl_description {
+    border-top: 1px solid #fff;
+}
+
+#kl_wrapper_3.kl_basic_color #kl_banner #kl_description {
+    margin-right: -86px;
+    font-size: 14px;
+    height: 24px;
+    line-height:4px;
+}
+
+#kl_wrapper_3.kl_basic_color #kl_navigation {
+    border-top:1px solid #fff;
+}
+
+#kl_wrapper_3.kl_basic_color #kl_navigation {
+    background-color: transparent;
+}
+
+body.course-menu-expanded #kl_wrapper_3.kl_basic_color #kl_navigation>ul {
+    border-spacing: 4px 2px;
+}
+
+body.course-menu-expanded #kl_wrapper_3.kl_basic_color #kl_navigation>ul li:nth-child(even), body:not(.course-menu-expanded) #kl_wrapper_3.kl_basic_color #kl_navigation>ul li {
+    background-image: none;
+}
+
+body.course-menu-expanded #kl_wrapper_3.kl_basic_color #kl_navigation>ul li {
+    background-image: none;
+    background-color: transparent;
+    border: 1px solid #00853E;
+    border-radius: 4px;
+}
+
+body.course-menu-expanded #kl_wrapper_3.kl_basic_color #kl_navigation ul li a {
+    color: #00853E;
+}
+
+body.course-menu-expanded #kl_wrapper_3.kl_basic_color #kl_navigation>ul li:hover {
+    background-color: #00853E;
+    color: #fff;
+}
+
+body.course-menu-expanded #kl_wrapper_3.kl_basic_color #kl_navigation ul li a {
+    border: 0px;
+}
+
+body.course-menu-expanded #kl_wrapper_3.kl_basic_color #kl_navigation ul li a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+#kl_wrapper_3.kl_basic_color>div:not(#kl_banner):not(#kl_banner_image):not(#kl_navigation) {
+    padding: 10px 20px;
+}
+
+#kl_wrapper_3.kl_basic_color > div:nth-child(odd) {
+    background-color: #f5f5f5;
+}
+
+#kl_wrapper_3.kl_basic_color h3:not(.ui-state-default) {
+    color: #00853E;
+    border-bottom:2px solid #00853E;
+}
+
+#kl_wrapper_3.kl_basic_color #kl_banner_right::after {
+    content: "";
+    position: absolute;
+    display:inline-block;
+    top: 14px;
+    right:8px;
+    width:73px;
+    height:24px;
+    background: url("https://unt.instructure.com/courses/21621/files/3954131/download");
+    background-repeat:no-repeat;
+    background-size: 100%;
+}
+
+#kl_wrapper_3.kl_basic_color #kl_banner {
+    padding-right: 86px;
+}
+
+#kl_wrapper_3.kl_basic_color #kl_banner .kl_subtitle {
+    margin-right: -86px;
+}
+
+#kl_wrapper_3 h4,h5,h6 {
+    color: #00853E;
+}
