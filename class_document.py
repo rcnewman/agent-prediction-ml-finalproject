@@ -178,20 +178,5 @@ class Document():
                     ["Antagonist", a, self.antagonist_g, ag]
                     ]
         print(self.title)
-#        print(tabulate(values, headers = ["Prediction", "Gold", "Compare"]))
 
         return [pg, ag]
-    
-## TEst
-#d = Document("The Monkey's Paw", "../Files/pg12122.txt", "Herbert White", "Sergeant-Major Morris")
-#print(d.sentiments)
-#print()
-#print(d.corefs)
-
-#nlp = spacy.load('en_core_web_sm')
-#neuralcoref.add_to_pipe(nlp)
-#doc1 = nlp('My sister has a dog.')
-#print(doc1._.coref_clusters)
-#
-#for ent in doc1.ents:
-#    print(ent._.coref_cluster)
