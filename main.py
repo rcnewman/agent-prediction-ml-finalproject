@@ -15,7 +15,7 @@ with open("data_labels_2.csv", "rb") as file:
         try:
             all_docs.append(Document(row["Book"], "Files/"+row["file"], row["Protagonist"], row["Antagonist"]))
 #            with open("Dataset/%s.pickle"%(row["Book"]), "wb") as file:
-            with open("Dataset_2/%s.pickle"%(row["Book"]), "wb") as file:
+            with open("Dataset/%s.pickle"%(row["Book"]), "wb") as file:
                 pickle.dump(all_docs[-1], file)
         except Exception as e:
             print("Error: No file found "+row["file"]+".")
