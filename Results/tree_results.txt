@@ -1,0 +1,15 @@
+Tree Confusion Matrix
+[[   0   10    1]
+ [  44 3953   10]
+ [   0   18    7]]
+
+Tree Classification Report
+              precision    recall  f1-score   support
+
+           a       0.00      0.00      0.00        11
+           n       0.99      0.99      0.99      4007
+           p       0.39      0.28      0.33        25
+
+    accuracy                           0.98      4043
+   macro avg       0.46      0.42      0.44      4043
+weighted avg       0.99      0.98      0.98      4043
