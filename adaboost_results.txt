@@ -1,0 +1,17 @@
+Training Adaboost...
+Adaboost:
+AdaBoost Confusion Matrix
+[[   0   17    2]
+ [   0 3016    9]
+ [   0    8    7]]
+
+AdaBoost Classification Report
+              precision    recall  f1-score   support
+
+           a       0.00      0.00      0.00        19
+           n       0.99      1.00      0.99      3025
+           p       0.39      0.47      0.42        15
+
+    accuracy                           0.99      3059
+   macro avg       0.46      0.49      0.47      3059
+weighted avg       0.98      0.99      0.99      3059
