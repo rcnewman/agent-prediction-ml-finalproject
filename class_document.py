@@ -10,7 +10,7 @@ from tabulate import tabulate
 import numpy as np
 
 #nltk.download("popular")
-#nltk.downoad("vader_lexicon")
+#nltk.download("vader_lexicon")
 
 # Document Class --------------------------------------------------------------
 class Document():
@@ -36,7 +36,7 @@ class Document():
         try:
             all_lines = []
             line = ""
-            with open(file) as file:
+            with open(file, encoding="utf8") as file:
                 header_end = False
                 for l in file.readlines():
                     if "*** END OF THIS PROJECT GUTENBERG EBOOK" in l:
